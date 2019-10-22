@@ -28,7 +28,7 @@ module Dre
 
     class << self
       def for_owner(owner)
-        where(owner_id: owner.id, owner_type: owner.class.base_class)
+        where(owner_id: owner.id, owner_type: owner.class.base_class.to_s)
       end
     end
   end
